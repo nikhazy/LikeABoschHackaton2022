@@ -41,7 +41,15 @@ namespace DataHandling
         {
             for (int i = 0; i < TimeStamp.Count; i++)
             {
+                SensorDetectonOverTimeList.Add(new DetectionOverTime());
 
+                for (int j = 0; j < Camera.CameraObjects.Count; j++)
+                {
+                    if(Camera.CameraObjects[j].CameraDatas[i].ObjType != ObjectType.NoDetection)
+                    {
+                        SensorDetectonOverTimeList.Last().DetectedObjectsOnSensors.Add(new DetectedObject());
+                    }
+                }
             }
         }
     }
