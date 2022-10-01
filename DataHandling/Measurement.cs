@@ -28,10 +28,10 @@ namespace DataHandling
             Camera = new Camera();
             Radars = new List<Radar>();
 
-            for (int i = 0; i < 4; i++)
-            {
-                Radars.Add(new Radar());
-            }
+            Radars.Add(new Radar("LF", 3473.8, 628.6, 515.6, 42, 0));
+            Radars.Add(new Radar("LR", -766.4, 738, 735.9, 135, 0.48));
+            Radars.Add(new Radar("RF", 3473.8, -628.6, 515.6, -42, 0));
+            Radars.Add(new Radar("RR", -766.4, -738, 735.9, -135, 0.48));
         }
     }
 }

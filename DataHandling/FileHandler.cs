@@ -1,5 +1,6 @@
 ﻿using DataHandling.Model.ADMA;
 using DataHandling.Model.Cam;
+using DataHandling.Model.Common;
 using DataHandling.Model.HostVehicle;
 using DataHandling.Model.Rad;
 
@@ -157,7 +158,7 @@ namespace DataHandling
                     camPosDataElements.Add(lineElements[camPosIndexes[j]]);
                 }
 
-                Measurement.Instance.Camera.CameraPositions.Add(new CameraMountingPosition(camPosDataElements.ToArray()));
+                Measurement.Instance.Camera.CameraPositions.Add(new Position(camPosDataElements.ToArray()));
 
             }
         }
