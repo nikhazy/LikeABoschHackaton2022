@@ -9,13 +9,13 @@ namespace DataHandling.Model.Rad
 {
     public class Radar
     {
-        public string Name { get; set; }
+        public DetectorDevice Type { get; set; }
         public List<double> RadarTimeStamp { get; set; }
         public List<RadarObject> RadarObjects { get; set; }
         public Position Position { get; set; }
-        public Radar(string name, double x, double y, double z, double angleAzi, double angleEle)
+        public Radar(DetectorDevice type, double x, double y, double z, double angleAzi, double angleEle)
         {
-            Name = name;
+            Type = type;
             Position = new Position(x,y,z, angleAzi, angleEle);
             RadarTimeStamp = new List<double>();
             RadarObjects = new List<RadarObject>();
